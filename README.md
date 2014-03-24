@@ -1,4 +1,4 @@
-# - - - Dead (simple) Weather - - - - - - - - - - #
+# Dead (simple) Weather #
 This is a simple CLI based weather Application
 based on the FeedParser Python Module.
 
