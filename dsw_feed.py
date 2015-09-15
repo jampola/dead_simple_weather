@@ -12,7 +12,7 @@
 # GNU Public License (GPLv2)
 # 
 # Original Author:
-# imadev@jamesbos.com 
+# jb@jamesbos.com 
 # - - - - - - - - - - - - - - - - - - - - - - - - #
 
 import feedparser
