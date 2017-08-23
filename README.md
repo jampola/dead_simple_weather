@@ -1,20 +1,45 @@
-# Dead (simple) Weather #
-This is a simple CLI based weather Application
-based on the FeedParser Python Module.
+# Dead Simple Weather
 
-This utilises the yahoo weather RSS feed. 
-I cannot garauntee it will work forever.  
+## What is this?
 
-Requirements:
-Requires the use of the FeedParser (https://pypi.python.org/pypi/feedparser) and 
-Bleach (https://pypi.python.org/pypi/bleach) Python Modules
+This grabs weather data from Yahoo's [weather API](https://developer.yahoo.com/weather/) using [YQL](https://developer.yahoo.com/yql/) and allows you to format an output.
 
-Uses:
-Pipe it's output to whatever you like (Conky, Ardiono/RasPI with LCD, etc)
+## Usage
 
-License:
-GNU Public License (GPLv2)
+    app.py (optional) "location" "string message"
 
-Original Author:
-email: imadev@jamesbos.com
-web: www.jamesbos.com
+## Settings
+
+See `settings.py` for example.
+
+Set `userstring` and/or `location` to `False` to specify in command line arguements. Eg.
+
+    app.py "New York" "The current temp is #current_temp"
+
+String substitution list
+
+* #sunrise 
+* #sunset
+* #humidity
+* #condition_code https://developer.yahoo.com/weather/documentation.html#codes
+* #last_update
+* #current_temp
+* #forecast_high
+* #forecast_low
+* #current_condition
+* #title
+* #city
+* #country
+* #region
+
+## Example Output
+
+    user_string='''Current Temp in #city (#region) is #current_temp with a high of #forecast_high and a low of #forecast_low''' 
+
+Output
+
+    Current Temp in Melbourne (Victoria) is 14.4° with a high of 16.4° and a low of 6.7°
+
+## Author
+
+[James Bos](https://www.jamesbos.com)
